@@ -4,6 +4,11 @@ angular
 
     $scope.cribs;
 
+    $scope.priceInfo = {
+      min: 0,
+      max: 1000000
+    }
+
     cribsFactory.getCribs().then(function(response) {
       $scope.cribs = response.data;
     });
