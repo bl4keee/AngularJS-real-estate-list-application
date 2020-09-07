@@ -9,6 +9,14 @@ angular
       max: 1000000
     }
 
+    $scope.newListing = {};
+
+    $scope.addCrib = function(newListing) {
+      newListing.image = 'default-crib';
+      $scope.cribs.push(newListing);
+      $scope.newListing = {};
+    }
+
     cribsFactory.getCribs().then(function(response) {
       $scope.cribs = response.data;
     });
